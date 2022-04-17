@@ -7,15 +7,28 @@ using DevFreela.Core.Entities;
 
 namespace DevFreela.Infrastructure.Persistence
 {
-    public class DevFreelaDbContent
+    public class DevFreelaDbContext
     {
-        public DevFreelaDbContent()
+        public DevFreelaDbContext()
         {
             Projects = new List<Project>
             {
-                new Project("MEu projeto ASPNET Core", "Minha descrição do projeto ", 1 ,1, 10000),
+                new Project("Meu projeto ASPNET Core", "Minha descrição do projeto ", 1 ,1, 10000),
                 new Project("MEu projeto ASPNET Core 2", "Minha descrição do projeto 2", 1 ,1, 20000),
-                new Project("MEu projeto ASPNET Core 3", "Minha descrição do projeto 3", 1 ,1, 30000)
+                new Project("Meu projeto ASPNET Core 3", "Minha descrição do projeto 3", 1 ,1, 30000)
+            };
+
+            User = new List<Users>()
+            {
+                new Users ("Vivan Sanches", "viviansan93@gmail.com", new DateTime(1992,1,1)),
+                new Users ("Arthur", "viviansan93@gmail.com", new DateTime(1992,1,1)),
+                new Users ("Raissa", "viviansan93@gmail.com", new DateTime(1992,1,1)),
+            };
+
+            Skills = new List<Skill>()
+            {
+                new Skill("C#"),
+                new Skill(".Net")
             };
         }
         public List<Project> Projects { get; set; }
